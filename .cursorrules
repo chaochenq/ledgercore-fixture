@@ -1,0 +1,9 @@
+# Cursor rules — ledgercore (coding-agent instruction file)
+
+ledgercore is a double-entry payments ledger in Rust. It is NOT an agentic
+product — there are no LLM agents, tools, or MCP servers.
+
+- Keep postings balanced (entries must sum to zero).
+- Scope every query to the verified tenant; never trust a request header.
+- Use parameterized SQL; never `format!` a query.
+- No hardcoded secrets.

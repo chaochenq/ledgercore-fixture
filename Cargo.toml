@@ -1,0 +1,15 @@
+[package]
+name = "ledgercore"
+version = "0.1.0"
+edition = "2021"
+description = "Double-entry payments ledger (non-agentic security validation fixture)"
+
+[dependencies]
+
+[[bin]]
+name = "ledgercore"
+path = "src/main.rs"
+
+[lib]
+name = "ledgercore"
+path = "src/lib.rs"

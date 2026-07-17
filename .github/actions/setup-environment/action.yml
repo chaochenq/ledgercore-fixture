@@ -1,0 +1,10 @@
+# POSITIVE CONTROL (not a coding agent): a local composite action that installs
+# the Rust toolchain and builds. Invokes no LLM/agent.
+name: setup-environment
+description: Install Rust and build ledgercore
+runs:
+  using: composite
+  steps:
+    - uses: dtolnay/rust-toolchain@stable
+    - shell: bash
+      run: cargo build --locked
